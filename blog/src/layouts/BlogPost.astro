@@ -60,6 +60,16 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				margin: 1.5rem 0;
 				text-align: center;
 			}
+			/* Fix: Subgraph title spacing from child nodes */
+			.mermaid .cluster-label {
+				padding-bottom: 8px !important;
+			}
+			.mermaid .cluster rect {
+				padding-top: 30px !important;
+			}
+			.mermaid .cluster .nodeLabel {
+				margin-top: 8px;
+			}
 		</style>
 	</head>
 
@@ -91,13 +101,21 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		</main>
 		<Footer />
 		
-		<!-- Mermaid.js for diagram rendering -->
 		<script type="module">
 			import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 			mermaid.initialize({ 
 				startOnLoad: true,
 				theme: 'default',
-				securityLevel: 'loose'
+				securityLevel: 'loose',
+				flowchart: {
+					subGraphTitleMargin: {
+						top: 10,
+						bottom: 15
+					},
+					padding: 20,
+					nodeSpacing: 50,
+					rankSpacing: 50
+				}
 			});
 		</script>
 	</body>

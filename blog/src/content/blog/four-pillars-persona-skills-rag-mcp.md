@@ -1,133 +1,140 @@
 ---
 title: 'The 4 Pillars: Persona, Skills, RAG, MCP'
-description: 'A decision framework for what goes where in your agent context—Persona, Skills, RAG, or MCP?'
+description: 'A decision framework for agent context—grounded in role prompting research and the origins of RAG.'
 pubDate: 'Jan 19 2026'
 heroImage: '../../assets/blog-placeholder-2.jpg'
 ---
 
-> "Should I put this in RAG, a Skill, or the Persona?" — A decision framework for what goes where.
+> "Should I put this in RAG, a Skill, or the Persona?"
+
+Every engineer building agents hits this wall. You have domain knowledge—a PDF, a database, a rule—and you don't know where it belongs.
+
+Get it wrong, and you get **Context Overflow** (expensive, slow agents) or **Context Amnesia** (hallucinations).
+
+---
 
 ## The Problem
 
-You're building an AI agent. You have domain knowledge to add. Where does it go?
+Most developers treat the LLM context window like a junk drawer. They stuff strict rules, messy docs, and JSON schemas into one massive system prompt.
 
-This is one of the most common questions I hear. And the wrong answer leads to:
+**This is the "Swiss Army Knife" trap.** It works for a demo, but in production, it fails because: -> **Cognitive Load**.
 
-- **Confused agents** that hallucinate because context is missing
-- **Slow agents** that burn tokens on irrelevant information
-- **Brittle agents** that break when you update one piece of knowledge
-- **Expensive agents** that cost more than they should
+Just as humans struggle to multitask, LLMs degrade when instructions conflict. We need an architecture that separates concerns.
 
-The truth is: **there are four pillars** of agent context, and each serves a different purpose.
+---
 
 ## The Concept
 
-Every piece of knowledge in your agent system belongs to one of four pillars:
+There are **four distinct pillars** of agent context. Each solves a specific problem.
 
-> 💡 **Key Insight**: The right pillar isn't about where it fits—it's about when and how the agent needs it.
+| Pillar | Solving For... | The Authority Anchor |
+|--------|----------------|----------------------|
+| 🎭 **Persona** | **Identity** & Reasoning Style | "Role Prompting" improves reasoning accuracy (research). |
+| 📚 **Skills** | **Capabilities** (How-to) | Tool Use / Function Calling standards. |
+| 📖 **RAG** | **Knowledge** (What) | Lewis et al. (2020) original RAG paper. |
+| 🔌 **MCP** | **Interoperability** (Action) | Anthropic's Model Context Protocol. |
 
-### The Four Pillars Compared
+```mermaid
+flowchart TD
+    subgraph Input["👤 User Request"]
+        Q["Can you fix the database query in this repo?"]
+    end
 
-| Aspect | Persona | Skills | RAG | MCP |
-|--------|---------|--------|-----|-----|
-| **Question** | WHO is the agent? | HOW to do things? | WHAT to know? | What ACTIONS to take? |
-| **Content** | Identity, tone, values | Procedures, workflows | Facts, documents | Tool definitions, APIs |
-| **When Loaded** | Always in prompt | At task start | Query-time retrieval | On tool invocation |
-| **Token Cost** | ~500 (always) | ~1K (per task) | Variable (per query) | ~200/tool |
-| **Changes** | Rarely | Occasionally | Frequently | When APIs change |
+    subgraph Pillars["🏛️ The 4 Pillars"]
+        P["🎭 Persona\n(WHO am I?)"]
+        S["📚 Skills\n(HOW do I code?)"]
+        R["📖 RAG\n(WHAT is the schema?)"]
+        M["🔌 MCP\n(ACT on the DB)"]
+    end
+
+    Q --> P
+    P --> S
+    S --> R
+    S --> M
+    M --> Output["✅ Result"]
+```
+
+---
 
 ## Pillar 1: Persona 🎭
 
 **Purpose**: Define WHO the agent IS.
+**When**: Always present (System Prompt).
 
-The persona sets identity, communication style, and decision frameworks. It's always present in the system prompt.
+Recent research on **Role Prompting** shows that assigning a specific persona (e.g., "You are a Senior Security Engineer") significantly improves reasoning capabilities, sometimes by over 20%.
 
-**What belongs here**:
-- Behavioral guidelines ("Always explain trade-offs")
-- Communication style ("Frame designs as storytelling journeys")
-- Decision frameworks ("Prioritize simplicity over completeness")
-- Core values ("Never compromise on security")
+**The Mistake**: Using Persona for *mechanics*.
+*   ❌ "You are an agent that outputs JSON with keys x, y, z..."
+*   ✅ "You are a pragmatist who values working code over theoretical purity."
 
-**The difference a persona makes**:
+**Governance Rule**: The Persona defines the *values* the agent uses to make trade-offs.
 
-| Without Persona | With Persona |
-|-----------------|--------------|
-| "Here is the architecture document." | "Here's the thing about great architecture. It doesn't start with technology. It starts with the problem worth solving." |
+---
 
 ## Pillar 2: Skills 📚
 
 **Purpose**: Teach HOW to do things.
+**When**: Loaded on demand (Tool Definitions).
 
-Skills are modular knowledge packages that agents load on demand. They solve the context overflow problem.
+Skills are procedural knowledge. If Persona is the "character," Skills are the "script." In modern terms, these are **Tools** or **Functions** that the model can call.
 
-**What belongs here**:
-- Step-by-step procedures
-- Domain-specific workflows
-- Templates and examples
-- Best practices for specific tasks
+**The Mistake**: Hardcoding steps in the System Prompt.
+**The Fix**: Encapsulate logic in a tool. instead of telling the detailed steps of "How to valid email", just give the agent a `validate_email()` tool.
 
-**Example skills**:
-- `c4-diagrams`: How to create C4 architecture diagrams
-- `security-design`: Security patterns and considerations
-- `sequential-thinking`: Structured reasoning approach
+> **Why?** It moves complexity from *probabilistic* tokens (the LLM guessing) to *deterministic* code (the function executing).
+
+---
 
 ## Pillar 3: RAG 📖
 
 **Purpose**: Access WHAT to know—facts and documents.
+**When**: Retrieved at query time.
 
-RAG (Retrieval-Augmented Generation) gives agents access to external knowledge they weren't trained on.
+Patrick Lewis et al. introduced **RAG** in 2020 to solve the "knowledge cutoff" problem.
 
-**What belongs here**:
-- Company policies and standards
-- Past project documentation
-- Domain-specific data
-- Reference materials
+**The Enterprise Litmus Test for RAG**:
+If the information changes faster than your deployment cycle, it implies **RAG**.
+
+*   Company Policies? **RAG.**
+*   Yesterday's Sales Data? **RAG.**
+*   Java Syntax? **Training Data (Model).**
+
+---
 
 ## Pillar 4: MCP 🔌
 
 **Purpose**: Connect to external ACTIONS.
+**When**: Invoked to change the world.
 
-MCP (Model Context Protocol) is the standardized way for agents to interact with external tools and services.
+The **Model Context Protocol (MCP)** is the new standard for connecting AI models to data sources. It's the "USB-C" for agents.
 
-**What belongs here**:
-- Database queries
-- File operations
-- API integrations
-- External service calls
+**Why it matters**: Before MCP, every agent needed custom glue code to talk to GitHub, Slack, or Postgres. With MCP, you write the connector once, and any agent can use it.
 
-**Think of it as "USB for AI"**—a universal interface that any tool can implement.
+---
 
-## Decision Examples
+## The Decision Framework
 
-| Scenario | Best Choice | Why |
-|----------|-------------|-----|
-| "Our company uses PostgreSQL, not MySQL" | **RAG** | Factual constraint that may change |
-| "How to generate a C4 diagram correctly" | **Skill** | Procedural knowledge, step-by-step |
-| "Always explain trade-offs" | **Persona** | Behavioral guideline |
-| "Query the project database" | **MCP** | External system action |
-| "List of approved vendors" | **RAG** | Document that updates periodically |
-| "When to use microservices vs monolith" | **Skill** | Decision framework |
-| "Frame designs as storytelling" | **Persona** | Communication style |
+How do you decide? Use the **Time-Horizon Heuristic**:
 
-## The Priority Order
+| If the information changes... | Use this Pillar... |
+|-------------------------------|--------------------|
+| **Never** (Values, Style) | 🎭 **Persona** |
+| **Quarterly** (Procedures) | 📚 **Skills** |
+| **Daily/Weekly** (Facts) | 📖 **RAG** |
+| **Real-time** (System State) | 🔌 **MCP** |
 
-When content could fit in multiple places:
-
-1. **Persona First**: If it defines WHO the agent is → Persona
-2. **Skill Second**: If it's HOW to do something repeatedly → Skill
-3. **RAG Third**: If it's WHAT to know (facts, data) → RAG
-4. **MCP Fourth**: If it's an ACTION on external systems → MCP
+---
 
 ## Key Takeaways
 
-- ✅ **Persona** = Identity and behavior (always present)
-- ✅ **Skills** = Procedures and workflows (loaded on demand)
-- ✅ **RAG** = Facts and documents (retrieved at query time)
-- ✅ **MCP** = External actions (invoked when needed)
-- ✅ **Use the decision tree**: WHO → HOW → ACTION → WHAT
+- ✅ **Don't clutter context**: Use the right pillar to keep the "reasoning brain" clear.
+- ✅ **Persona is for values**: Use it to guide *decisions*, not just format output.
+- ✅ **Skills are deterministic**: Move complex logic out of prompts and into code.
+- ✅ **Standardize with MCP**: Don't build custom integrations if an open standard exists.
+
+---
 
 ## What's Next
 
-- 📖 **Previous article**: [The Orchestra: Why Multi-Agent AI Works](/Harry-the-architect/blog/the-orchestra-why-multi-agent-works/) — Why specialized agents working together outperform monolithic models
-- 📖 **Next article**: Skills — Deep dive into Claude/Antigravity skill patterns
-- 💬 **Discuss**: How do you organize context in your agents?
+- 📖 **Previous article**: [The Orchestra: Why Multi-Agent AI Works](/Harry-the-architect/blog/the-orchestra-why-multi-agent-works/)
+- 💬 **Discuss**: Which pillar is the biggest bottleneck in your current agents?

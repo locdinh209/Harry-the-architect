@@ -84,7 +84,7 @@ Each specialist follows a consistent pattern:
 
 ```mermaid
 flowchart LR
-    MISSION["1️⃣ MISSION<br/>Receive the goal"] --> SCENE["2️⃣ SCENE<br/>Understand context"]
+    MISSION["1️⃣. MISSION<br/>Receive the goal"] --> SCENE["2️⃣ SCENE<br/>Understand context"]
     SCENE --> THINK["3️⃣ THINK<br/>Reason & plan"]
     THINK --> ACT["4️⃣ ACT<br/>Execute via tools"]
     ACT --> OBSERVE["5️⃣ OBSERVE<br/>Learn from results"]
