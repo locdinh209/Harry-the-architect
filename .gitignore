@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+.astro/
+
+# IDE and system files
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Agent skills and local development files
+.agent/
+.gemini/
+
+# Python files
+__pycache__/
+*.pyc
+.coverage
+.pytest_cache/
+venv/
+.venv/
+
+# Local environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Personal documents (keep in local only)
+*.pdf
+HarryCV*.pdf
+
+# Source content (optional - uncomment if you want to keep it private)
+# content/
+# docs/
+# building-multi-agent-systems-presentation.md
+# content-strategy.md
