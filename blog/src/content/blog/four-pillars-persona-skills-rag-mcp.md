@@ -34,6 +34,17 @@ There are **four distinct pillars** of agent context. Each solves a specific pro
 | 📖 **RAG** | **Knowledge** (What) | Lewis et al. (2020) original RAG paper. |
 | 🔌 **MCP** | **Interoperability** (Action) | Anthropic's Model Context Protocol. |
 
+### Validated by Google's Framework
+
+This structure mirrors the cognitive architecture defined in Google's *Context Engineering* guide:
+
+| Our Pillar | Google's Equivalent | The Function |
+|------------|---------------------|--------------|
+| 🎭 **Persona** | **System Instructions** | Defines the "Role" and behavioral constraints. |
+| 📚 **Skills** | **Procedural Memory** | Stores "How-to" knowledge (tools, code, workflows). |
+| 📖 **RAG** | **Semantic Memory** | Stores "What-is" knowledge (facts, docs, data). |
+| 🔌 **MCP** | **Tool Interoperability** | The standardized interface for action. |
+
 ```mermaid
 flowchart TD
     subgraph Input["👤 User Request"]
@@ -138,3 +149,11 @@ How do you decide? Use the **Time-Horizon Heuristic**:
 
 - 📖 **Previous article**: [The Orchestra: Why Multi-Agent AI Works](/Harry-the-architect/blog/the-orchestra-why-multi-agent-works/)
 - 💬 **Discuss**: Which pillar is the biggest bottleneck in your current agents?
+
+---
+
+## References
+
+1.  **Google Cloud Research** — *Context Engineering: Sessions & Memory* (2025). Defines the distinction between Procedural Memory (Skills) and Semantic Memory (RAG) in agentic architectures.
+2.  **Anthropic** — *Prompt Engineering Guidelines*. Source for Role Prompting effectiveness.
+3.  **Lewis et al.** — *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks* (NeurIPS 2020).

@@ -38,7 +38,9 @@ Instead of one performer trying to do everything, you have specialized musicians
 
 > 💡 **The Key Principle**: Specialization isn't just about performance—it's the only way to achieve **reliability** at scale.
 
-According to **Anthropic's internal research**, a multi-agent architecture (orchestrator + subagents) achieved a **90.2% increase in accuracy** on complex software tasks compared to a single-agent approach. 
+According to **Anthropic's internal research**, a multi-agent architecture (orchestrator + subagents) achieved a **90.2% increase in accuracy** on complex software tasks.
+
+This aligns with **Google's "Level 3" Agent Taxonomy**: moving from simple response generation to **Collaborative Multi-Agent Systems** that can handle dynamic, non-linear workflows.
 
 That's the difference between a prototype and production.
 
@@ -146,3 +148,5 @@ You dump the script into a 1M context window. The model translates 80% correctly
 3.  **Google Cloud** — *Vertex AI Agents*. Defines the "Perceive-Reason-Act" loop as the core of agentic reasoning. [cloud.google.com/vertex-ai/docs/agent-engine](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/overview)
     
 4.  **Galileo** — *The "Lost in the Middle" Phenomenon*. Research on how LLM reasoning quality degrades as context window usage increases.
+
+5.  **Google Cloud Research** — *Introduction to Agents* (2025). Defines the 5-level taxonomy of agentic systems, positioning multi-agent teams as "Level 3" collaborative systems.
