@@ -106,6 +106,30 @@ input {
 
 table {
 	width: 100%;
+	border-collapse: collapse;
+	margin: 1.5em 0;
+	font-size: 0.95em;
+}
+
+table th,
+table td {
+	padding: 0.75em 1em;
+	border: 1px solid rgb(var(--gray-light));
+	text-align: left;
+}
+
+table th {
+	background-color: rgb(var(--gray-light));
+	font-weight: 600;
+	color: rgb(var(--gray-dark));
+}
+
+table tr:nth-child(even) {
+	background-color: rgba(var(--gray-light), 0.3);
+}
+
+table tr:hover {
+	background-color: rgba(var(--gray-light), 0.5);
 }
 
 img {
