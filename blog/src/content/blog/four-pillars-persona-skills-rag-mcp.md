@@ -2,7 +2,7 @@
 title: 'The 4 Pillars: Persona, Skills, RAG, MCP'
 description: 'A decision framework for agent context—grounded in role prompting research and the origins of RAG.'
 pubDate: 'Jan 19 2026'
-heroImage: '../../assets/blog-placeholder-2.jpg'
+heroImage: '../../assets/four-pillars-hero.png'
 ---
 
 > "Should I put this in RAG, a Skill, or the Persona?"
