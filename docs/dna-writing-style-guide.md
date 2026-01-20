@@ -186,6 +186,18 @@ Before publishing, verify:
 - [ ] Is the main concept dead simple? (Simplicity)
 - [ ] Is there a "Litmus Test" or "Rule of Thumb" takeaway?
 
+### YAML Frontmatter ✓
+- [ ] Are all frontmatter strings using **double quotes**? (Never single quotes)
+- [ ] Have apostrophes been avoided or replaced with alternative phrasing?
+- [ ] Does the description avoid special characters (colons, em-dashes)?
+
+> **CRITICAL**: Astro's YAML parser will fail if you use apostrophes inside single-quoted strings.
+>
+> ```yaml
+> ❌ description: 'Here's how to...'       # BREAKS - apostrophe inside single quotes
+> ✅ description: "Here is how to..."      # WORKS - double quotes, no apostrophe
+> ```
+
 ### Technical Excellence ✓
 - [ ] Is the architecture sound? (Correctness)
 - [ ] Are diagrams crisp and clear (Short titles)? (Visual)
