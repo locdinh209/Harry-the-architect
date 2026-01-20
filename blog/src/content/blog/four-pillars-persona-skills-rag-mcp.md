@@ -148,7 +148,8 @@ How do you decide? Use the **Time-Horizon Heuristic**:
 ## What's Next
 
 - 📖 **Previous article**: [The Orchestra: Why Multi-Agent AI Works](/Harry-the-architect/blog/the-orchestra-why-multi-agent-works/)
-- 💬 **Discuss**: Which pillar is the biggest bottleneck in your current agents?
+- � **Next article**: [Skills: Progressive Context Disclosure](/Harry-the-architect/blog/skills-progressive-context-disclosure/) — Escape the "Prompt Blob Monster" with on-demand procedural knowledge.
+- �💬 **Discuss**: Which pillar is the biggest bottleneck in your current agents?
 
 ---
 
