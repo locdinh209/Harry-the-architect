@@ -284,7 +284,7 @@ flowchart TD
 ## What's Next
 
 - 📖 **Previous article**: [Building Knowledge Bases: RAG Done Right](/Harry-the-architect/blog/rag-best-practices-knowledge-bases/)
-- 🎉 **Season 2 Complete!** You now have best practices for Prompts, RAG, and MCP.
+- 📖 **Next article**: [Context Engineering: Sessions & Memory](/Harry-the-architect/blog/context-engineering-sessions-memory/) — Managing short-term and long-term agent memory.
 - 💬 **Discuss**: How many tools does your most complex agent use?
 
 ---
