@@ -166,7 +166,7 @@ Consider an agent with 10 specialized capabilities:
 ## What's Next
 
 - 📖 **Previous article**: [The 4 Pillars: Persona, Skills, RAG, MCP](/Harry-the-architect/blog/four-pillars-persona-skills-rag-mcp/) — The decision framework for agent context.
-- 📖 **Next article**: The 9 Principles of Intelligent Agents — Coming soon.
+- 📖 **Next article**: [The 9 Principles of Intelligent Agents](/Harry-the-architect/blog/nine-principles-intelligent-agents/) — Core design principles from Google research.
 - 💬 **Discuss**: How are you organizing procedural knowledge in your agents?
 
 ---
