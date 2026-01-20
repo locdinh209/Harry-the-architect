@@ -14,6 +14,8 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
+// Start Here = first article (oldest in series)
+const startHerePost = posts[posts.length - 1];
 const featuredPost = posts[0];
 const morePosts = posts.slice(1, 4);
 ---
@@ -284,7 +286,7 @@ const morePosts = posts.slice(1, 4);
 		<!-- Hero Section -->
 		<section class="hero">
 			<h1 class="hero-title">Harry | The Architect</h1>
-			<p class="hero-subtitle">Staff Architect building intelligent systems with Multi-Agent AI</p>
+			<p class="hero-subtitle">Architect building intelligent systems with Multi-Agent AI</p>
 			<p class="hero-description">
 				I write about AI architecture patterns that actually work in production. 
 				From orchestration to quality gates—practical insights you can use.
@@ -296,10 +298,36 @@ const morePosts = posts.slice(1, 4);
 		</section>
 		
 		<main class="container">
-			<!-- Featured Article -->
+			<!-- Start Here: First Article in Series -->
+			{startHerePost && (
+				<section class="featured-section">
+					<h2 class="section-title">✨ Start Here</h2>
+					<a href={`${base}blog/${startHerePost.id}/`} class="featured-card">
+						{startHerePost.data.heroImage && (
+							<Image 
+								src={startHerePost.data.heroImage} 
+								alt="" 
+								class="featured-image"
+								width={480}
+								height={300}
+							/>
+						)}
+						<div class="featured-content">
+							<span class="featured-label">Begin the Series</span>
+							<h3 class="featured-title">{startHerePost.data.title}</h3>
+							<p class="featured-description">{startHerePost.data.description}</p>
+							<p class="featured-meta">
+								<FormattedDate date={startHerePost.data.pubDate} />
+							</p>
+						</div>
+					</a>
+				</section>
+			)}
+			
+			<!-- Featured Article (Latest) -->
 			{featuredPost && (
 				<section class="featured-section">
-					<h2 class="section-title">Featured Article</h2>
+					<h2 class="section-title">Latest Article</h2>
 					<a href={`${base}blog/${featuredPost.id}/`} class="featured-card">
 						{featuredPost.data.heroImage && (
 							<Image 
