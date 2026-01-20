@@ -1,8 +1,8 @@
 ---
-title: 'Context Engineering: Sessions & Memory'
-description: 'The shift from prompt engineering to context engineering—how to manage short-term sessions and long-term memory for intelligent agents.'
-pubDate: 'Jan 21 2026'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+title: "Context Engineering: Sessions and Memory"
+description: "The shift from prompt engineering to context engineering - how to manage short-term sessions and long-term memory for intelligent agents."
+pubDate: "Jan 21 2026"
+heroImage: "../../assets/blog-placeholder-4.jpg"
 ---
 
 > "Context engineering is what separates agents that forget mid-conversation from agents that remember you for years."

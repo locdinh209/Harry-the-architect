@@ -1,8 +1,8 @@
 ---
-title: 'The 9 Principles of Intelligent Agents'
-description: 'Core design principles from Google research that separate toy demos from production-ready agent systems.'
-pubDate: 'Jan 20 2026'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+title: "The 9 Principles of Intelligent Agents"
+description: "Core design principles from Google research that separate toy demos from production-ready agent systems."
+pubDate: "Jan 20 2026"
+heroImage: "../../assets/blog-placeholder-4.jpg"
 ---
 
 > Building agents is easy. Building agents that *work* in production is hard. These 9 principles are the difference.

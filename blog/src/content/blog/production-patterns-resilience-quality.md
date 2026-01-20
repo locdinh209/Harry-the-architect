@@ -1,8 +1,8 @@
 ---
-title: 'Production Patterns: Resilience & Quality'
-description: 'Your agent will fail. Here's how to build systems that catch failures before users do—featuring LLM-as-a-Judge and retry patterns.'
-pubDate: 'Jan 20 2026'
-heroImage: '../../assets/blog-placeholder-5.jpg'
+title: "Production Patterns: Resilience and Quality"
+description: "Your agent will fail. Here is how to build systems that catch failures before users do - featuring LLM-as-a-Judge and retry patterns."
+pubDate: "Jan 20 2026"
+heroImage: "../../assets/blog-placeholder-5.jpg"
 ---
 
 > Your agent works in the demo. Now make it work at 3 AM when the API is slow, the model hallucinates, and no one is watching.

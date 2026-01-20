@@ -1,8 +1,8 @@
 ---
-title: 'Skills: Progressive Context Disclosure'
-description: 'How to escape the "Prompt Blob Monster" with on-demand procedural knowledge—the secret weapon for scalable agents.'
-pubDate: 'Jan 20 2026'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+title: "Skills: Progressive Context Disclosure"
+description: "How to escape the Prompt Blob Monster with on-demand procedural knowledge - the secret weapon for scalable agents."
+pubDate: "Jan 20 2026"
+heroImage: "../../assets/blog-placeholder-3.jpg"
 ---
 
 > Your system prompt is 5,000 tokens and growing. Every new feature makes your agent slower, more expensive, and dumber. There's a better way.

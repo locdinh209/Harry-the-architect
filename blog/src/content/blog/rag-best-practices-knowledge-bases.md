@@ -1,8 +1,8 @@
 ---
-title: 'Building Knowledge Bases: RAG Done Right'
-description: 'Your RAG returns irrelevant results. The fix isn't a better embedding model—it's better architecture.'
-pubDate: 'Jan 21 2026'
-heroImage: '../../assets/blog-placeholder-2.jpg'
+title: "Building Knowledge Bases: RAG Done Right"
+description: "Your RAG returns irrelevant results. The fix is not a better embedding model - it is better architecture."
+pubDate: "Jan 21 2026"
+heroImage: "../../assets/blog-placeholder-2.jpg"
 ---
 
 > "The quality of your RAG is 80% data preparation and 20% model choice. Most teams have this backwards."

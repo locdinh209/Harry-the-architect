@@ -1,8 +1,8 @@
 ---
-title: 'MCP Best Practices: Tools That Don't Overwhelm'
-description: '50 tools = a confused agent. Here's how to design tool ecosystems that scale without overwhelming your AI.'
-pubDate: 'Jan 21 2026'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+title: "MCP Best Practices: Tools That Do Not Overwhelm"
+description: "50 tools equal a confused agent. Here is how to design tool ecosystems that scale without overwhelming your AI."
+pubDate: "Jan 21 2026"
+heroImage: "../../assets/blog-placeholder-3.jpg"
 ---
 
 > "The problem isn't that your agent has too few capabilities. It's that it has too many—all at once."
