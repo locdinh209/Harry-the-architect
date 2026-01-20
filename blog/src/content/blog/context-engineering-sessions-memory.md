@@ -342,6 +342,7 @@ When Agent A hands off to Agent B:
 ## What's Next
 
 - 📖 **Previous article**: [MCP Best Practices: Tools That Don't Overwhelm](/Harry-the-architect/blog/mcp-best-practices-tools/)
+- 📖 **Next article**: [A2A Protocol: Agent-to-Agent Collaboration](/Harry-the-architect/blog/a2a-protocol-agent-collaboration/) — Google's protocol for agent interoperability.
 - 💬 **Discuss**: How do you handle context overflow in your agents?
 
 ---

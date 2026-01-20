@@ -198,7 +198,7 @@ flowchart TD
 ## What's Next
 
 - 📖 **Previous article**: [Skills: Progressive Context Disclosure](/Harry-the-architect/blog/skills-progressive-context-disclosure/) — On-demand procedural knowledge.
-- 📖 **Next article**: Production Patterns: Resilience & Quality — Coming soon.
+- 📖 **Next article**: [Production Patterns: Resilience & Quality](/Harry-the-architect/blog/production-patterns-resilience-quality/) — Build systems that catch failures before users do.
 - 💬 **Discuss**: Which principle is most often violated in your experience?
 
 ---
