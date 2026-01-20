@@ -261,7 +261,7 @@ flowchart TD
 ## What's Next
 
 - 📖 **Previous article**: [The 9 Principles of Intelligent Agents](/Harry-the-architect/blog/nine-principles-intelligent-agents/) — Core design principles.
-- 🎉 **Series Complete!** You now have the foundation to build production-ready agent systems.
+- 📖 **Next article**: [Prompt Engineering That Scales](/Harry-the-architect/blog/prompt-engineering-that-scales/) — From demo prompts to production systems.
 - 💬 **Discuss**: What's the worst production failure you've seen with an AI agent?
 
 ---
