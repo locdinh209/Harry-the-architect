@@ -1,8 +1,8 @@
 ---
-title: 'LLM-as-a-Judge Deep Dive'
-description: 'Beyond simple pass/fail. Learn rubrics, pairwise comparison, multi-judge panels, and bias mitigation for automated evaluation.'
-pubDate: 'Jan 21 2026'
-heroImage: '../../assets/blog-placeholder-2.jpg'
+title: "LLM-as-a-Judge Deep Dive"
+description: "Beyond simple pass/fail. Learn rubrics, pairwise comparison, multi-judge panels, and bias mitigation for automated evaluation."
+pubDate: "Jan 21 2026"
+heroImage: "../../assets/blog-placeholder-2.jpg"
 ---
 
 > "The best evaluator is another LLM—if you know how to ask."

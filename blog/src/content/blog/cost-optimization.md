@@ -1,8 +1,8 @@
 ---
-title: 'Cost Optimization: Token Budgeting & Caching'
-description: 'Agents are expensive. Here's how to reduce costs with token budgets, caching, model selection, and smart architecture.'
-pubDate: 'Jan 21 2026'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+title: "Cost Optimization: Token Budgeting and Caching"
+description: "Agents are expensive. Here is how to reduce costs with token budgets, caching, model selection, and smart architecture."
+pubDate: "Jan 21 2026"
+heroImage: "../../assets/blog-placeholder-4.jpg"
 ---
 
 > "The cheapest token is the one you never send."

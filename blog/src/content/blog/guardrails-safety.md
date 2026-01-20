@@ -1,8 +1,8 @@
 ---
-title: 'Guardrails & Safety: Protecting Your Agents'
-description: 'Input filtering, output validation, jailbreak prevention, and human-in-the-loop. Build agents that stay within bounds.'
-pubDate: 'Jan 21 2026'
-heroImage: '../../assets/blog-placeholder-5.jpg'
+title: "Guardrails and Safety: Protecting Your Agents"
+description: "Input filtering, output validation, jailbreak prevention, and human-in-the-loop. Build agents that stay within bounds."
+pubDate: "Jan 21 2026"
+heroImage: "../../assets/blog-placeholder-5.jpg"
 ---
 
 > "An agent without guardrails is a liability, not an asset."

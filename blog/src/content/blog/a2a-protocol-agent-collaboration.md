@@ -1,8 +1,8 @@
 ---
-title: 'A2A Protocol: Agent-to-Agent Collaboration'
-description: 'MCP connects agents to tools. A2A connects agents to each other. Here's Google's new protocol for true multi-agent interoperability.'
-pubDate: 'Jan 21 2026'
-heroImage: '../../assets/blog-placeholder-5.jpg'
+title: "A2A Protocol: Agent-to-Agent Collaboration"
+description: "MCP connects agents to tools. A2A connects agents to each other. Here is Google's new protocol for true multi-agent interoperability."
+pubDate: "Jan 21 2026"
+heroImage: "../../assets/blog-placeholder-5.jpg"
 ---
 
 > "Your agents can call tools. But can they call each other?"

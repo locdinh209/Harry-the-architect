@@ -1,8 +1,8 @@
 ---
-title: 'Eval & Benchmarking: Measuring Agent Quality'
-description: '"How do you know your agent is good?" Here's the comprehensive guide to metrics, benchmarks, and best practices for evaluating LLM agents.'
-pubDate: 'Jan 21 2026'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+title: "Eval and Benchmarking: Measuring Agent Quality"
+description: "How do you know your agent is good? Here is the comprehensive guide to metrics, benchmarks, and best practices for evaluating LLM agents."
+pubDate: "Jan 21 2026"
+heroImage: "../../assets/blog-placeholder-3.jpg"
 ---
 
 > "You can't improve what you can't measure—but measuring agents is harder than you think."

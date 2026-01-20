@@ -1,8 +1,8 @@
 ---
-title: 'Agentic Coding Assistants: The New Developer Workflow'
-description: 'Cursor, Windsurf, and Copilot are redefining how we code. Here's what makes them agentic—and how to use them effectively.'
-pubDate: 'Jan 21 2026'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+title: "Agentic Coding Assistants: The New Developer Workflow"
+description: "Cursor, Windsurf, and Copilot are redefining how we code. Here is what makes them agentic and how to use them effectively."
+pubDate: "Jan 21 2026"
+heroImage: "../../assets/blog-placeholder-4.jpg"
 ---
 
 > "The best code assistant doesn't just complete your line—it completes your thought."
