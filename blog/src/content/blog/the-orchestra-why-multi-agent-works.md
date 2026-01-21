@@ -2,7 +2,7 @@
 title: "The Orchestra: Why Multi-Agent AI Works"
 description: "Why specialized AI agents working together outperform monolithic models - grounded in the 90.2% accuracy gains seen in enterprise research."
 pubDate: "Jan 18 2026"
-heroImage: "../../assets/the-orchestra-hero.png"
+heroImage: "../../assets/hero_orchestra.png"
 ---
 
 > One model can't do everything. At enterprise scale, the "one-man band" isn't just inefficient—it's a reliability risk.

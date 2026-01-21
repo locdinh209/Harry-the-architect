@@ -2,7 +2,7 @@
 title: "Prompt Engineering That Scales"
 description: "The prompts that work in demos break in production. Here is how to engineer prompts that scale from personal use to multi-agent systems."
 pubDate: "Jan 21 2026"
-heroImage: "../../assets/blog-placeholder-1.jpg"
+heroImage: "../../assets/hero_prompt.png"
 ---
 
 > "The most dangerous phrase in prompt engineering is 'it works on my machine.'"

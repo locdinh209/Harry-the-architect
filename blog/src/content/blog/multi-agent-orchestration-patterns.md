@@ -2,7 +2,7 @@
 title: "Multi-Agent Orchestration Patterns"
 description: "Supervisor, voting, hierarchical, and mesh. Learn when to use each pattern for coordinating multiple agents."
 pubDate: "Jan 21 2026"
-heroImage: "../../assets/blog-placeholder-1.jpg"
+heroImage: "../../assets/hero_orchestration.png"
 ---
 
 > "A conductor doesn't play instruments—they make the orchestra play together."
