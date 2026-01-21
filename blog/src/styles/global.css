@@ -171,10 +171,18 @@ hr {
 @media (max-width: 720px) {
 	body {
 		font-size: 16px;
+		line-height: 1.6; /* Better readability */
 	}
 
 	main {
-		padding: 1em;
+		padding: 2em 1em; /* More breathing room */
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
+	}
+	
+	h1 {
+		font-size: 2rem; /* Slightly smaller H1 */
 	}
 }
 

@@ -273,11 +273,28 @@ const morePosts = posts.slice(1, 4);
 			
 			@media (max-width: 480px) {
 				.hero {
-					padding: 2rem 1rem;
+					padding: 3rem 1rem 2rem; /* Better vertical balance */
+				}
+				
+				.hero-title {
+					font-size: 1.75rem; /* prevent wrapping issues */
 				}
 				
 				.pillars-grid {
 					grid-template-columns: 1fr;
+					gap: 1rem;
+				}
+				
+				/* Stack buttons on very small screens */
+				.hero-cta {
+					flex-direction: column;
+					width: 100%;
+				}
+				
+				.btn {
+					width: 100%;
+					text-align: center;
+					box-sizing: border-box;
 				}
 			}
 		</style>
