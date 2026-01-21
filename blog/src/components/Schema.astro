@@ -1,0 +1,85 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+interface Props {
+	type?: 'website' | 'article';
+	title?: string;
+	description?: string;
+	image?: string;
+	pubDate?: Date;
+	updatedDate?: Date;
+}
+
+const { 
+	type = 'website',
+	title = SITE_TITLE,
+	description = SITE_DESCRIPTION,
+	image = '/Harry-the-architect/blog-placeholder-1.jpg',
+	pubDate,
+	updatedDate
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const siteUrl = Astro.site?.toString();
+
+// Base Schema for Harry (The Person/Organization)
+const harrySchema = {
+	"@type": "Person",
+	"@id": `${siteUrl}#harry`,
+	"name": "Harry Dinh",
+	"url": siteUrl,
+	"jobTitle": "AI Architect",
+	"description": "Architect building intelligent systems with Multi-Agent AI, Cloud Architecture, and Enterprise Data.",
+	"sameAs": [
+		"https://github.com/locdinh209",
+		"https://www.linkedin.com/in/harrydinh/" 
+	]
+};
+
+let schema;
+
+if (type === 'article') {
+	schema = {
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": canonicalURL.toString()
+		},
+		"headline": title,
+		"description": description,
+		"image": new URL(image, Astro.url).toString(),
+		"author": harrySchema,
+		"datePublished": pubDate?.toISOString(),
+		"dateModified": updatedDate?.toISOString() || pubDate?.toISOString(),
+		"publisher": {
+			"@type": "Organization",
+			"name": SITE_TITLE,
+			"logo": {
+				"@type": "ImageObject",
+				"url": new URL('favicon.svg', Astro.url).toString() 
+			}
+		}
+	};
+} else {
+	// Website Schema for Homepage
+	schema = {
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		"url": siteUrl,
+		"name": SITE_TITLE,
+		"description": SITE_DESCRIPTION,
+		"author": harrySchema,
+		"potentialAction": {
+			"@type": "SearchAction",
+			"target": {
+				"@type": "EntryPoint",
+				"urlTemplate": `${siteUrl}?q={search_term_string}`
+			},
+			"query-input": "required name=search_term_string"
+		}
+	};
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://locdinh209.github.io/Harry-the-architect/sitemap-index.xml

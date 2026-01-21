@@ -158,13 +158,16 @@ Keep diagrams readable on mobile and preventing layout breaks.
 - **Short Titles**: Subgraph titles must be < 20 chars. Put details in child nodes.
 - **Config**: Use `subGraphTitleMargin` in Mermaid config for spacing.
 - **No HTML Breaks**: Avoid `<br/>` in titles; use separate nodes instead.
+- **Node Labels**: Use `<br/>` for newlines in node labels. `\n` WILL NOT RENDER.
 
 ```mermaid
 subgraph BAD["❌ Long Title That Breaks Layout"]
+    Node["Line 1\nLine 2 (Broken)"]
 end
 
 subgraph GOOD["✅ Short Title"]
     Detail["Detailed description goes here"]
+    Node2["Line 1<br/>Line 2 (Works)"]
 end
 ```
 

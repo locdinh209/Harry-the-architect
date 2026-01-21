@@ -1,0 +1,16 @@
+{
+    "name": "Harry | The Architect",
+    "short_name": "Harry Architect",
+    "description": "Building intelligent AI systems. Multi-Agent AI, Cloud Architecture, Enterprise Data.",
+    "start_url": "/Harry-the-architect/",
+    "display": "minimal-ui",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+        {
+            "src": "/Harry-the-architect/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}
