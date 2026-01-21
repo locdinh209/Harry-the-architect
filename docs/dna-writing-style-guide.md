@@ -203,6 +203,28 @@ Before publishing, verify:
 - [ ] Are diagrams crisp and clear (Short titles)? (Visual)
 - [ ] Did I cite sources (Anthropic, LangGraph, Google)? (Credibility)
 
+### Cross-Referencing ✓
+- [ ] Does this topic overlap with an existing deep-dive article?
+- [ ] If introducing a concept covered elsewhere, add a **📖 Deep Dive** callout linking to the full treatment.
+- [ ] Avoid duplicating content—summarize briefly and link.
+
+> **Pattern for Cross-References:**
+> ```markdown
+> > 📖 **Deep Dive**: For the complete treatment of [topic], see [Article Title](/Harry-the-architect/blog/article-slug/).
+> ```
+
+### Official Sources ✓
+- [ ] Did I reference the relevant **Google official guides** ([1]-[5])?
+- [ ] Are third-party sources (books, papers) cited for advanced topics?
+
+| Topic | Primary Official Source |
+|-------|------------------------|
+| Agent fundamentals | [1] Introduction to Agents |
+| MCP & Tools | [2] Agent Tools & MCP |
+| Sessions & Memory | [3] Context Engineering |
+| Evaluation | [4] Agent Quality |
+| Production | [5] Prototype to Production |
+
 ---
 
 ## 🏆 The Ultimate Test

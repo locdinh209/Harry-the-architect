@@ -279,7 +279,7 @@ Track daily:
 ## What's Next
 
 - 📖 **Previous article**: [Guardrails & Safety](/Harry-the-architect/blog/guardrails-safety/)
-- 📖 **Series complete!** Check the [full series index](/Harry-the-architect/blog/).
+- 📖 **Next article**: [AgentOps: Observability in Production](/Harry-the-architect/blog/agentops-observability-production/) — When your agent fails at 3 AM, can you debug it?
 - 💬 **Discuss**: What's your biggest cost driver in agent systems?
 
 ---
