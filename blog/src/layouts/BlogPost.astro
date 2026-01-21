@@ -10,7 +10,14 @@ import Schema from '../components/Schema.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { 
+	title, 
+	description, 
+	pubDate, 
+	updatedDate, 
+	heroImage,
+	faq 
+} = Astro.props;
 ---
 
 <html lang="en">
@@ -23,6 +30,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			pubDate={pubDate} 
 			updatedDate={updatedDate} 
 			image={heroImage?.src} 
+			faq={faq}
 		/>
 		<style>
 			main {

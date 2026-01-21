@@ -14,10 +14,21 @@ const {
 	type = 'website',
 	title = SITE_TITLE,
 	description = SITE_DESCRIPTION,
-	image = '/Harry-the-architect/blog-placeholder-1.jpg',
+	image = '/Harry-the-architect/blog-placeholder-about.jpg',
 	pubDate,
-	updatedDate
+	updatedDate,
+	faq
 } = Astro.props;
+
+interface Props {
+	type?: 'website' | 'article';
+	title?: string;
+	description?: string;
+	image?: string;
+	pubDate?: Date;
+	updatedDate?: Date;
+	faq?: { question: string; answer: string; }[];
+}
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const siteUrl = Astro.site?.toString();
@@ -67,41 +78,65 @@ if (type === 'article') {
 	});
 }
 
+// 5. FAQ Page (Rich Snippets)
+let faqSchema;
+if (faq && faq.length > 0) {
+	faqSchema = {
+		"@type": "FAQPage",
+		"mainEntity": faq.map(item => ({
+			"@type": "Question",
+			"name": item.question,
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": item.answer
+			}
+		}))
+	};
+}
+
 let schema;
 
 if (type === 'article') {
-	// 3. TECH ARTICLE (The Content) - Specificity Win
-	schema = {
-		"@context": "https://schema.org",
-		"@graph": [
-			harrySchema,
-			breadcrumbSchema,
-			{
-				"@type": "TechArticle",
-				"mainEntityOfPage": {
-					"@type": "WebPage",
-					"@id": canonicalURL.toString()
-				},
-				"headline": title,
-				"description": description,
-				"image": new URL(image, Astro.url).toString(),
-				"author": { "@id": `${siteUrl}#harry` },
-				"datePublished": pubDate?.toISOString(),
-				"dateModified": updatedDate?.toISOString() || pubDate?.toISOString(),
-				"proficiencyLevel": "Expert", 
-				"publisher": {
-					"@type": "Organization",
-					"name": SITE_TITLE,
-					"logo": {
-						"@type": "ImageObject",
-						"url": new URL('favicon.svg', Astro.url).toString() 
-					}
+	// 3. TECH ARTICLE (The Content)
+	const graph = [
+		harrySchema,
+		breadcrumbSchema,
+		{
+			"@type": "TechArticle",
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": canonicalURL.toString()
+			},
+			"headline": title,
+			"description": description,
+			"image": new URL(image, Astro.url).toString(),
+			"author": { "@id": `${siteUrl}#harry` },
+			"datePublished": pubDate?.toISOString(),
+			"dateModified": updatedDate?.toISOString() || pubDate?.toISOString(),
+			"proficiencyLevel": "Expert", 
+			"publisher": {
+				"@type": "Organization",
+				"name": SITE_TITLE,
+				"logo": {
+					"@type": "ImageObject",
+					"url": new URL('favicon.svg', Astro.url).toString() 
 				}
 			}
-		]
+		}
+	];
+
+	// Conditionally push FAQ schema
+	if (faqSchema) {
+		graph.push(faqSchema);
+	}
+
+	schema = {
+		"@context": "https://schema.org",
+		"@graph": graph
 	};
+
 } else {
-	// 4. WEBSITE (The Hub)
+	// 4. WEBSITE (The Hub) - Unchanged for now
 	schema = {
 		"@context": "https://schema.org",
 		"@graph": [
