@@ -1,0 +1,108 @@
+---
+/**
+ * Giscus Comments Component
+ * Uses GitHub Discussions for comments
+ * 
+ * Setup required:
+ * 1. Enable Discussions on your GitHub repo
+ * 2. Install Giscus app: https://github.com/apps/giscus
+ * 3. Configure at: https://giscus.app/
+ */
+
+interface Props {
+  repo?: string;
+  repoId?: string;
+  category?: string;
+  categoryId?: string;
+}
+
+// Default configuration - update with your actual values after setup
+const {
+  repo = "locdinh209/Harry-the-architect",
+  repoId = "", // Get from giscus.app
+  category = "Comments",
+  categoryId = "" // Get from giscus.app
+} = Astro.props;
+---
+
+<section class="giscus-container">
+  <h3>💬 Join the Discussion</h3>
+  
+  {repoId && categoryId ? (
+    <!-- Giscus widget - will load when repo is configured -->
+    <script
+      src="https://giscus.app/client.js"
+      data-repo={repo}
+      data-repo-id={repoId}
+      data-category={category}
+      data-category-id={categoryId}
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async
+    ></script>
+  ) : (
+    <!-- Placeholder until Giscus is configured -->
+    <div class="giscus-placeholder">
+      <p>Comments coming soon! In the meantime, share your thoughts on LinkedIn.</p>
+    </div>
+  )}
+  
+  <div class="linkedin-cta">
+    <p>
+      <strong>📣 Prefer LinkedIn?</strong> 
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">
+        Connect and discuss on LinkedIn →
+      </a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .giscus-container {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgb(var(--gray-light));
+  }
+  
+  .giscus-container h3 {
+    margin-bottom: 1rem;
+    color: rgb(var(--gray-dark));
+  }
+  
+  .giscus-placeholder {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    color: rgb(var(--gray));
+  }
+  
+  .linkedin-cta {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #0077b5 0%, #005582 100%);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .linkedin-cta p {
+    margin: 0;
+    color: white;
+  }
+  
+  .linkedin-cta a {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .linkedin-cta a:hover {
+    opacity: 0.9;
+  }
+</style>

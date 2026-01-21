@@ -1,0 +1,31 @@
+---
+/**
+ * Google Analytics 4 Component
+ * Add this to BaseHead for site-wide tracking
+ * 
+ * Setup required:
+ * 1. Create GA4 property at https://analytics.google.com
+ * 2. Get your Measurement ID (G-XXXXXXXXXX)
+ * 3. Update the GA_MEASUREMENT_ID below
+ */
+
+interface Props {
+  measurementId?: string;
+}
+
+// Update with your actual GA4 Measurement ID
+const { measurementId = "" } = Astro.props;
+---
+
+{measurementId && (
+  <>
+    <!-- Google tag (gtag.js) -->
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>
+    <script define:vars={{ measurementId }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', measurementId);
+    </script>
+  </>
+)}
