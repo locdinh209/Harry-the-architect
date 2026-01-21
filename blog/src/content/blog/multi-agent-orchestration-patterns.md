@@ -113,9 +113,9 @@ Agents process in sequence, each transforming the output of the previous.
 
 ```mermaid
 flowchart LR
-    I["Input"] --> A1["Extract\nAgent"]
-    A1 --> A2["Transform\nAgent"]
-    A2 --> A3["Validate\nAgent"]
+    I["Input"] --> A1["Extract<br/>Agent"]
+    A1 --> A2["Transform<br/>Agent"]
+    A2 --> A3["Validate<br/>Agent"]
     A3 --> O["Output"]
 ```
 
@@ -181,16 +181,16 @@ Multi-level delegation. Top-level supervisor manages sub-supervisors who manage 
 
 ```mermaid
 flowchart TD
-    CEO["Executive\nSupervisor"]
+    CEO["Executive<br/>Supervisor"]
     
-    CEO --> ENG["Engineering\nSub-Supervisor"]
-    CEO --> MKT["Marketing\nSub-Supervisor"]
+    CEO --> ENG["Engineering<br/>Sub-Supervisor"]
+    CEO --> MKT["Marketing<br/>Sub-Supervisor"]
     
-    ENG --> DEV1["Backend\nWorker"]
-    ENG --> DEV2["Frontend\nWorker"]
+    ENG --> DEV1["Backend<br/>Worker"]
+    ENG --> DEV2["Frontend<br/>Worker"]
     
-    MKT --> COPY["Copywriter\nWorker"]
-    MKT --> DES["Designer\nWorker"]
+    MKT --> COPY["Copywriter<br/>Worker"]
+    MKT --> DES["Designer<br/>Worker"]
 ```
 
 ### When to Use

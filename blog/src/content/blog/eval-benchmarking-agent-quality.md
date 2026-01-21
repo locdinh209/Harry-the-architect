@@ -154,10 +154,10 @@ Never rely on a single metric. Use a scorecard:
 ```mermaid
 flowchart LR
     subgraph Scorecard
-        A["Task Success\n85%"]
-        B["Safety\n95%"]
-        C["Efficiency\n72%"]
-        D["Robustness\n68%"]
+        A["Task Success<br/>85%"]
+        B["Safety<br/>95%"]
+        C["Efficiency<br/>72%"]
+        D["Robustness<br/>68%"]
     end
 ```
 

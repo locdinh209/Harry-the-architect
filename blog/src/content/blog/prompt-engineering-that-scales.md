@@ -78,7 +78,7 @@ Traditional prompt engineering focuses on phrasing. **Context engineering** focu
 | Format | Best For | Example |
 |--------|----------|---------|
 | **JSON** | Machine parsing, APIs | `{"answer": "...", "confidence": 0.85}` |
-| **Markdown** | Human reading, documentation | `## Summary\n- Point 1\n- Point 2` |
+| **Markdown** | Human reading, documentation | `## Summary<br/>- Point 1<br/>- Point 2` |
 | **XML Tags** | Claude, complex structures | `<analysis><summary>...</summary></analysis>` |
 
 ---

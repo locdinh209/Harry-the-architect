@@ -239,10 +239,10 @@ LLM judges often disagree with humans on edge cases. Close the gap:
 
 ```mermaid
 flowchart LR
-    H["Human-Scored\nGolden Set"] --> C["Compare to\nLLM Scores"]
-    C --> A["Adjust\nPrompt/Thresholds"]
-    A --> T["Test on\nHeldout Set"]
-    T --> D{Correlation\n≥ 0.8?}
+    H["Human-Scored<br/>Golden Set"] --> C["Compare to<br/>LLM Scores"]
+    C --> A["Adjust<br/>Prompt/Thresholds"]
+    A --> T["Test on<br/>Heldout Set"]
+    T --> D{Correlation<br/>≥ 0.8?}
     D -->|No| A
     D -->|Yes| P["Deploy"]
 ```

@@ -49,10 +49,10 @@ Cost = Σ (Input Tokens × Input Price + Output Tokens × Output Price)
 
 ```mermaid
 flowchart LR
-    T["Task"] --> B{"Within\nBudget?"}
+    T["Task"] --> B{"Within<br/>Budget?"}
     B -->|Yes| P["Process"]
     B -->|No| F["Fallback"]
-    P --> C["Check\nRemaining"]
+    P --> C["Check<br/>Remaining"]
     C --> B
 ```
 
@@ -125,10 +125,10 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    I["Input"] --> H{"Cache\nHit?"}
-    H -->|Yes| C["Return\nCached"]
+    I["Input"] --> H{"Cache<br/>Hit?"}
+    H -->|Yes| C["Return<br/>Cached"]
     H -->|No| L["LLM Call"]
-    L --> S["Store in\nCache"]
+    L --> S["Store in<br/>Cache"]
     S --> O["Output"]
     C --> O
 ```
@@ -180,7 +180,7 @@ flowchart LR
     end
     
     subgraph "Compressed"
-        S["Summary of\nTurns 1-(N-3)"]
+        S["Summary of<br/>Turns 1-(N-3)"]
         TN3["Turn N-2"]
         TN2["Turn N-1"]
         TN1["Turn N"]
@@ -224,7 +224,7 @@ flowchart LR
     end
     
     subgraph "Batched"
-        R4["Request 1\nRequest 2\nRequest 3"] --> C4["Single Call"]
+        R4["Request 1<br/>Request 2<br/>Request 3"] --> C4["Single Call"]
     end
 ```
 
