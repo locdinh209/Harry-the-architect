@@ -351,8 +351,8 @@ When Agent A hands off to Agent B:
 
 1.  **Google Cloud Research** — *Context Engineering: Sessions & Memory* (2025). The primary reference for memory types and session management.
 
-2.  **Anthropic** — *Building Effective Agents* (2024). Emphasizes context curation over prompt crafting.
+2.  **Anthropic** — [*Building Effective Agents*](https://www.anthropic.com/engineering/building-effective-agents) (2024). Emphasizes context curation over prompt crafting.
 
-3.  **Google Cloud Research** — *Introduction to Agents* (2025). Defines the role of context in the agentic loop.
+3.  **Google Cloud Research** — [*Introduction to Agents*](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/overview) (2025). Defines the role of context in the agentic loop.
 
-4.  **Tulving, E.** — *Episodic and Semantic Memory* (1972). The foundational cognitive science research on memory types.
+4.  **Tulving, E.** — [*Episodic and Semantic Memory*](https://en.wikipedia.org/wiki/Episodic_memory) (1972). The foundational cognitive science research on memory types.

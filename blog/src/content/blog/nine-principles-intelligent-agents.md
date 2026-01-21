@@ -207,8 +207,8 @@ flowchart TD
 
 ## References
 
-1.  **Google Cloud Research** — *Introduction to Agents* (2025). Defines the Agentic Loop and 5-level taxonomy.
-
-2.  **Google Cloud Research** — *Agent Quality* (2025). Introduces trajectory evaluation and LLM-as-a-Judge patterns.
-
-3.  **Anthropic** — *Building Effective Agents* (2024). Emphasizes tool design and failure handling.
+210: 1.  **Google Cloud Research** — [*Introduction to Agents*](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/overview) (2025). Defines the Agentic Loop and 5-level taxonomy.
+211: 
+212: 2.  **Google Cloud Research** — [*Agent Quality*](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/agent-monitor) (2025). Introduces trajectory evaluation and LLM-as-a-Judge patterns.
+213: 
+214: 3.  **Anthropic** — [*Building Effective Agents*](https://www.anthropic.com/engineering/building-effective-agents) (2024). Emphasizes tool design and failure handling.
