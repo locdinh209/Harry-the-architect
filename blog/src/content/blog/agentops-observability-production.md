@@ -2,7 +2,7 @@
 title: "AgentOps: Observability in Production"
 description: "Your agent works in development. But when it fails at 3 AM, can you trace exactly what went wrong? Here is the observability stack you need."
 pubDate: "Jan 22 2026"
-heroImage: "../../assets/blog-placeholder-5.jpg"
+heroImage: "../../assets/hero_agentops.png"
 ---
 
 > "You can't fix what you can't see. And in production, everything that can go wrong, will."

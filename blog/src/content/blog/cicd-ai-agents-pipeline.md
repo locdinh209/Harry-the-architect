@@ -2,7 +2,7 @@
 title: "CI/CD for AI Agents: The Deployment Pipeline"
 description: "Agents are more than code - they are prompts, tools, and models combined. Traditional CI/CD breaks. Here is how to build pipelines that work."
 pubDate: "Jan 22 2026"
-heroImage: "../../assets/blog-placeholder-2.jpg"
+heroImage: "../../assets/hero_cicd.png"
 ---
 
 > "An AI agent is a composite system. Testing just the code is like testing a car's engine without the wheels."

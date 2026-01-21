@@ -2,7 +2,7 @@
 title: "Agent-as-a-Judge: Beyond LLM Evaluation"
 description: "LLM-as-Judge evaluates text. But agents do more than generate text - they reason, plan, and act. Here is the next paradigm for automated evaluation."
 pubDate: "Jan 22 2026"
-heroImage: "../../assets/blog-placeholder-1.jpg"
+heroImage: "../../assets/hero_agent_judge.png"
 ---
 
 > "Judging an agent by its final answer is like judging a chef by the last bite. You miss the entire process that got you there."

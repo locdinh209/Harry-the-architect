@@ -2,7 +2,7 @@
 title: "Safe Rollout Strategies for AI Agents"
 description: "100% deployment on merge is a recipe for disaster. Here are four proven patterns to deploy agents safely - canary, blue-green, A/B, and feature flags."
 pubDate: "Jan 22 2026"
-heroImage: "../../assets/blog-placeholder-3.jpg"
+heroImage: "../../assets/hero_rollout.png"
 ---
 
 > "The goal isn't to never fail. It's to fail small, fail fast, and fail forward."
