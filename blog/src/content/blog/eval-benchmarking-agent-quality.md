@@ -275,3 +275,5 @@ flowchart LR
 4.  **Maxim AI** — *Best LLM Evaluation Tools* (2025). Tools and platform comparison.
 
 5.  **DeepChecks** — *Key LLM Metrics for Production* (2025). Production monitoring focus.
+
+6.  **Google Cloud Research** — *Agent Quality* (2025). Defines the evaluation hierarchy, trajectory evaluation, and the "Agent Quality Flywheel."

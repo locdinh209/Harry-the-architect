@@ -156,6 +156,8 @@ output REJECT. Otherwise output ACCEPT.
 | Internal tooling, low risk | ❌ Overkill |
 | Real-time chat (latency-sensitive) | ⚠️ Consider async |
 
+> 📖 **Deep Dive**: For advanced techniques like rubrics, pairwise comparison, and multi-judge panels, see [LLM-as-a-Judge Deep Dive](/Harry-the-architect/blog/llm-as-judge-deep-dive/).
+
 ---
 
 ## Pattern 4: Circuit Breaker

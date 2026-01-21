@@ -43,6 +43,8 @@ Traditional prompt engineering focuses on phrasing. **Context engineering** focu
 
 **The Rule**: Stop optimizing *instructions*. Start optimizing *what information reaches the model*.
 
+> 📖 **Deep Dive**: For sessions, memory types, and full context management patterns, see [Context Engineering: Sessions and Memory](/Harry-the-architect/blog/context-engineering-sessions-memory/).
+
 ---
 
 ## The 7 Principles of Scalable Prompts
@@ -280,3 +282,5 @@ flowchart TD
 3.  **Google** — *Gemini Prompt Design Best Practices* (2025). Defines the 4-element framework: Persona, Task, Context, Format.
 
 4.  **Anthropic** — *Context Engineering* (2025). The shift from prompt crafting to information architecture.
+
+5.  **Google Cloud Research** — *Prompt Engineering v7* (2025). Comprehensive guide to prompt design patterns and agentic prompting.

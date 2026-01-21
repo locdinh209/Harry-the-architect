@@ -73,6 +73,8 @@ Traditional prompting focuses on *phrasing*. Context engineering focuses on *inf
 
 **The Shift**: Stop optimizing *instructions*. Start optimizing *what information reaches the model*.
 
+> 📖 **Deep Dive**: For the complete treatment of sessions, memory types, and context management, see [Context Engineering: Sessions and Memory](/Harry-the-architect/blog/context-engineering-sessions-memory/).
+
 ---
 
 ### Principle 4: Grounding in Reality

@@ -284,3 +284,5 @@ flowchart LR
 2.  **CrewAI** — *Hierarchical Agent Systems* (2025). Best practices guide.
 
 3.  **Google** — *Agent Orchestration Patterns* (2025). Enterprise patterns.
+
+4.  **Antonio Gulli** — *Agentic Design Patterns: A Hands-On Guide to Building Intelligent Systems* (Springer, 2025). Comprehensive patterns reference.

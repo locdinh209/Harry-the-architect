@@ -284,3 +284,5 @@ As of 2025, A2A has support from 50+ partners:
 3.  **Gravitee** — *A2A and MCP: Two Protocols to Rule the Agentic Web* (2025). Analysis of how the protocols complement each other.
 
 4.  **Platform Engineering** — *A2A Deep Dive* (2025). Enterprise implementation patterns.
+
+5.  **Google Cloud Research** — *Prototype to Production* (2025). Covers A2A as a key protocol for multi-agent reusability and standardization.

@@ -300,3 +300,5 @@ flowchart LR
 3.  **Emergent Mind** — *Pairwise Comparison Bias Mitigation* (2025). Research on position bias.
 
 4.  **ArXiv** — *Multi-Judge Panels for LLM Evaluation* (2025). Academic study on panel effectiveness.
+
+5.  **Google Cloud Research** — *Agent Quality* (2025). Introduces the "Agent-as-a-Judge" paradigm and the quality flywheel framework.
