@@ -236,7 +236,7 @@ flowchart TD
 ## What's Next
 
 - 📖 **Previous article**: [Cost Optimization: Token Budgeting and Caching](/Harry-the-architect/blog/cost-optimization/)
-- 📖 **Next article**: Coming soon — Agent-as-a-Judge: Beyond LLM Evaluation
+- 📖 **Next article**: [Agent-as-a-Judge: Beyond LLM Evaluation](/Harry-the-architect/blog/agent-as-judge-evaluation/) — Evaluate the trajectory, not just the output.
 - 💬 **Discuss**: What observability tools are you using for your agents?
 
 ---
