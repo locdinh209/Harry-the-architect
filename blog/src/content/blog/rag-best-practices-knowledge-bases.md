@@ -156,11 +156,11 @@ Neither vector search nor graph traversal is sufficient alone:
 flowchart TD
     Q["❓ Query"] --> A["🔍 Analyze Query Type"]
     
-    A --> V["📊 Vector Search\n(Semantic)"]
-    A --> K["🔤 Keyword Search\n(BM25)"]
-    A --> G["🕸️ Graph Query\n(Relationships)"]
+    A --> V["📊 Vector Search<br/>(Semantic)"]
+    A --> K["🔤 Keyword Search<br/>(BM25)"]
+    A --> G["🕸️ Graph Query<br/>(Relationships)"]
     
-    V --> F["⚖️ Fusion\n(RRF Scoring)"]
+    V --> F["⚖️ Fusion<br/>(RRF Scoring)"]
     K --> F
     G --> F
     

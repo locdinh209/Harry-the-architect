@@ -89,13 +89,13 @@ Use cheap models first, escalate only when needed:
 
 ```mermaid
 flowchart TD
-    T["Task"] --> M1["Model 1\n(Cheap/Fast)"]
+    T["Task"] --> M1["Model 1<br/>(Cheap/Fast)"]
     M1 --> C1{Success?}
     C1 -->|Yes| O["Output"]
-    C1 -->|No| M2["Model 2\n(Mid-tier)"]
+    C1 -->|No| M2["Model 2<br/>(Mid-tier)"]
     M2 --> C2{Success?}
     C2 -->|Yes| O
-    C2 -->|No| M3["Model 3\n(Premium)"]
+    C2 -->|No| M3["Model 3<br/>(Premium)"]
     M3 --> O
 ```
 

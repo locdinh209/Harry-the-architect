@@ -119,10 +119,10 @@ For high-stakes scenarios:
 ```mermaid
 flowchart TD
     A["Agent Output"]
-    A --> V1["Validator 1\n(Fast classifier)"]
+    A --> V1["Validator 1<br/>(Fast classifier)"]
     V1 --> C1{Pass?}
     C1 -->|No| R["Reject"]
-    C1 -->|Yes| V2["Validator 2\n(LLM-as-Judge)"]
+    C1 -->|Yes| V2["Validator 2<br/>(LLM-as-Judge)"]
     V2 --> C2{Pass?}
     C2 -->|No| RE["Regenerate"]
     RE --> A

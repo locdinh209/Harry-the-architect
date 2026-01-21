@@ -141,9 +141,9 @@ Input: {code}
 ```mermaid
 flowchart LR
     subgraph Roles["🎭 Distinct Agent Roles"]
-        A["🏗️ Architect\n(Design decisions)"]
-        B["💻 Developer\n(Implementation)"]
-        C["🔍 Reviewer\n(Quality checks)"]
+        A["🏗️ Architect<br/>(Design decisions)"]
+        B["💻 Developer<br/>(Implementation)"]
+        C["🔍 Reviewer<br/>(Quality checks)"]
     end
     A --> B --> C
 ```
@@ -229,16 +229,16 @@ In multi-agent systems, prompts must be **coordinated**, not just individually o
 ```mermaid
 flowchart TD
     subgraph System["🌐 System Level"]
-        G["Global Constraints\n(Safety, Format)"]
+        G["Global Constraints<br/>(Safety, Format)"]
     end
     
     subgraph Agent["🤖 Agent Level"]
-        P["Persona\n(Role, Values)"]
-        S["Skills\n(Procedures)"]
+        P["Persona<br/>(Role, Values)"]
+        S["Skills<br/>(Procedures)"]
     end
     
     subgraph Task["📋 Task Level"]
-        T["Task Prompt\n(Current Job)"]
+        T["Task Prompt<br/>(Current Job)"]
     end
     
     G --> P --> T

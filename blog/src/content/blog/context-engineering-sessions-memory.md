@@ -127,9 +127,9 @@ Google's research defines three types of long-term memory:
 ```mermaid
 flowchart TD
     subgraph Memory["🧠 Long-Term Memory"]
-        SEM["📚 Semantic\n(Facts & Knowledge)"]
-        PROC["📋 Procedural\n(How-To)"]
-        EPIS["📔 Episodic\n(Past Events)"]
+        SEM["📚 Semantic<br/>(Facts & Knowledge)"]
+        PROC["📋 Procedural<br/>(How-To)"]
+        EPIS["📔 Episodic<br/>(Past Events)"]
     end
     
     subgraph Examples["Examples"]
@@ -217,8 +217,8 @@ When history exceeds your budget:
 
 ```mermaid
 flowchart LR
-    H["📜 Full History\n(10,000 tokens)"] --> S["🤖 Summarize"]
-    S --> C["📝 Compressed\n(500 tokens)"]
+    H["📜 Full History<br/>(10,000 tokens)"] --> S["🤖 Summarize"]
+    S --> C["📝 Compressed<br/>(500 tokens)"]
     C --> N["➕ New Messages"]
     N --> CTX["📋 Context Window"]
 ```

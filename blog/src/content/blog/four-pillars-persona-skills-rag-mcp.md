@@ -52,10 +52,10 @@ flowchart TD
     end
 
     subgraph Pillars["🏛️ The 4 Pillars"]
-        P["🎭 Persona\n(WHO am I?)"]
-        S["📚 Skills\n(HOW do I code?)"]
-        R["📖 RAG\n(WHAT is the schema?)"]
-        M["🔌 MCP\n(ACT on the DB)"]
+        P["🎭 Persona<br/>(WHO am I?)"]
+        S["📚 Skills<br/>(HOW do I code?)"]
+        R["📖 RAG<br/>(WHAT is the schema?)"]
+        M["🔌 MCP<br/>(ACT on the DB)"]
     end
 
     Q --> P

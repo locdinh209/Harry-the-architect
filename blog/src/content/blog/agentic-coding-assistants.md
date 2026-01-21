@@ -180,9 +180,9 @@ Agentic assistants often work in steps. Review at each checkpoint:
 ```mermaid
 flowchart LR
     subgraph "Agent Workflow"
-        S["Start"] --> C1["Checkpoint 1\n(Plan)"]
-        C1 --> C2["Checkpoint 2\n(Changes)"]
-        C2 --> C3["Checkpoint 3\n(Tests)"]
+        S["Start"] --> C1["Checkpoint 1<br/>(Plan)"]
+        C1 --> C2["Checkpoint 2<br/>(Changes)"]
+        C2 --> C3["Checkpoint 3<br/>(Tests)"]
         C3 --> E["Complete"]
     end
     

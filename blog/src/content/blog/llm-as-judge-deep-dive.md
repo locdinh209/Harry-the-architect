@@ -102,10 +102,10 @@ For complex tasks, evaluate multiple dimensions:
 
 ```mermaid
 flowchart LR
-    O["Output"] --> A["Accuracy\n(0-5)"]
-    O --> C["Completeness\n(0-5)"]
-    O --> T["Tone\n(0-5)"]
-    O --> S["Safety\n(Pass/Fail)"]
+    O["Output"] --> A["Accuracy<br/>(0-5)"]
+    O --> C["Completeness<br/>(0-5)"]
+    O --> T["Tone<br/>(0-5)"]
+    O --> S["Safety<br/>(Pass/Fail)"]
     
     A --> F["Final Score"]
     C --> F
@@ -169,9 +169,9 @@ Single judges have blind spots. Use panels:
 ```mermaid
 flowchart TD
     O["Output to Evaluate"]
-    O --> J1["Judge 1\n(GPT-4)"]
-    O --> J2["Judge 2\n(Claude)"]
-    O --> J3["Judge 3\n(Gemini)"]
+    O --> J1["Judge 1<br/>(GPT-4)"]
+    O --> J2["Judge 2<br/>(Claude)"]
+    O --> J3["Judge 3<br/>(Gemini)"]
     
     J1 --> A["Aggregator"]
     J2 --> A

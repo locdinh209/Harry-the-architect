@@ -115,9 +115,9 @@ An agent can be both—receiving tasks from one agent while delegating to anothe
 
 ```mermaid
 flowchart TD
-    U["👤 User"] --> C["🤖 Client Agent\n(Orchestrator)"]
-    C --> R1["🤖 Remote Agent\n(Research)"]
-    C --> R2["🤖 Remote Agent\n(Writing)"]
+    U["👤 User"] --> C["🤖 Client Agent<br/>(Orchestrator)"]
+    C --> R1["🤖 Remote Agent<br/>(Research)"]
+    C --> R2["🤖 Remote Agent<br/>(Writing)"]
     R1 --> C
     R2 --> C
 ```

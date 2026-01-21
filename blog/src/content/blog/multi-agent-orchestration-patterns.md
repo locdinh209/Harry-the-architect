@@ -143,9 +143,9 @@ Multiple agents process the same input. Results are aggregated.
 
 ```mermaid
 flowchart TD
-    I["User Question"] --> A["Agent 1\n(GPT-4)"]
-    I --> B["Agent 2\n(Claude)"]
-    I --> C["Agent 3\n(Gemini)"]
+    I["User Question"] --> A["Agent 1<br/>(GPT-4)"]
+    I --> B["Agent 2<br/>(Claude)"]
+    I --> C["Agent 3<br/>(Gemini)"]
     
     A --> V["Voting/Aggregator"]
     B --> V
