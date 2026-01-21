@@ -2,57 +2,30 @@
 /**
  * Giscus Comments Component
  * Uses GitHub Discussions for comments
- * 
- * Setup required:
- * 1. Enable Discussions on your GitHub repo
- * 2. Install Giscus app: https://github.com/apps/giscus
- * 3. Configure at: https://giscus.app/
  */
-
-interface Props {
-  repo?: string;
-  repoId?: string;
-  category?: string;
-  categoryId?: string;
-}
-
-// Default configuration - update with your actual values after setup
-const {
-  repo = "locdinh209/Harry-the-architect",
-  repoId = "", // Get from giscus.app
-  category = "Comments",
-  categoryId = "" // Get from giscus.app
-} = Astro.props;
 ---
 
 <section class="giscus-container">
   <h3>💬 Join the Discussion</h3>
   
-  {repoId && categoryId ? (
-    <!-- Giscus widget - will load when repo is configured -->
-    <script
-      src="https://giscus.app/client.js"
-      data-repo={repo}
-      data-repo-id={repoId}
-      data-category={category}
-      data-category-id={categoryId}
-      data-mapping="pathname"
-      data-strict="0"
-      data-reactions-enabled="1"
-      data-emit-metadata="0"
-      data-input-position="top"
-      data-theme="light"
-      data-lang="en"
-      data-loading="lazy"
-      crossorigin="anonymous"
-      async
-    ></script>
-  ) : (
-    <!-- Placeholder until Giscus is configured -->
-    <div class="giscus-placeholder">
-      <p>Comments coming soon! In the meantime, share your thoughts on LinkedIn.</p>
-    </div>
-  )}
+  <!-- Giscus widget -->
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="locdinh209/Harry-the-architect"
+    data-repo-id="R_kgDOQ8uclg"
+    data-category="General"
+    data-category-id="DIC_kwDOQ8ucls4C1OSw"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
   
   <div class="linkedin-cta">
     <p>
@@ -74,14 +47,6 @@ const {
   .giscus-container h3 {
     margin-bottom: 1rem;
     color: rgb(var(--gray-dark));
-  }
-  
-  .giscus-placeholder {
-    background: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    color: rgb(var(--gray));
   }
   
   .linkedin-cta {
